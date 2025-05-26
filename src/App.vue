@@ -1,7 +1,7 @@
 <template>
     <div id="appvue" class="container-fluid">
-        <div class="page-header">
-            <h1 class="p-4">NT2 - Parcial</h1>
+        <div>
+            <h1 class="text-center my-4">NT2 - Parcial</h1>
         </div>
         <main>
             <RouterView/>

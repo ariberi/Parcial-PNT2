@@ -1,32 +1,39 @@
 <template>
-    <div class="container-fluid">
-        <div class="page-header">
-            <h1>Transformador de texto</h1>
-        </div>
+    <div class="container-fluid py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-header text-center bg-primary text-white">
+                        <h1>Transformador de texto</h1>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="textInput" class="control-label my-2">Ingrese el texto a transformar:</label>
+                                <input
+                                    type="text"
+                                    id="textInput"
+                                    v-model="text"
+                                    class="form-control"
+                                    placeholder="Escriba aquí el texto a transformar"
+                                />
+                            </div>
+                        </form>
 
-        <form class="form-horizontal">
-            <div class="form-group">
-                <label for="textInput" class="control-label my-2">Ingrese el texto a transformar:</label>
-                <input
-                    type="text"
-                    id="textInput"
-                    v-model="text"
-                    class="form-control"
-                    placeholder="Escriba aquí el texto a transformar"
-                />
-            </div>
-        </form>
-
-        <div class="my-2">
-            <div>
-                <p><strong>Cantidad de caracteres =</strong> {{ lengthText }}</p>
-                <ol>
-                    <li><strong>Codificado:</strong> {{ encodeString }}</li>
-                    <li><strong>Mayúsculas:</strong> {{ transformToUpperCase }}</li>
-                    <li><strong>Minúsculas:</strong> {{ transformToLowerCase }}</li>
-                    <li><strong>Intercalar mayúsculas y minúsculas (primera mayúscula):</strong> {{ alternateCaseFirstUpper }}</li>
-                    <li><strong>Intercalar mayúsculas y minúsculas (primera minúscula):</strong> {{ alternateCaseFirstLower }}</li>
-                </ol>
+                        <div class="mb-3">
+                            <div>
+                                <p><strong>Cantidad de caracteres =</strong> {{ lengthText }}</p>
+                                <ol>
+                                    <li><strong>Codificado:</strong> {{ encodeString }}</li>
+                                    <li><strong>Mayúsculas:</strong> {{ transformToUpperCase }}</li>
+                                    <li><strong>Minúsculas:</strong> {{ transformToLowerCase }}</li>
+                                    <li><strong>Intercalar mayúsculas y minúsculas (primera mayúscula):</strong> {{ alternateCaseFirstUpper }}</li>
+                                    <li><strong>Intercalar mayúsculas y minúsculas (primera minúscula):</strong> {{ alternateCaseFirstLower }}</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
